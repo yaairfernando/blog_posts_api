@@ -1,68 +1,110 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h2 align="center"> React and Redux Application</h2>
 
-## Available Scripts
+  <p align="center">
+    Project developed with React and Redux that implements a simple
+    example of comunication components using redux and how to include a third library called react-redux to let react and redux to talk to
+    each other.
+    <br />
+    <a href="https://github.com/YairFernando67/songs"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/YairFernando67/songs/issues">Report Bug</a>
+    ·
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<!-- ABOUT THE PROJECT -->
 
-### `yarn test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React application that use react and redux to display a list of songs.
 
-### `yarn build`
+<h4>Redux</h4>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* It is a state managment library, makes creating complex applications easier
+* When using redux it is not required to create a react app.
+* It is not explicity designed to work with react.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<h4>Redux Cycle</h4>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Action Creator: It is a function that is
+going to create or return a plain javascript
+object. We refer to this plain javascript
+object as an action, an action has a type.
+* Action: Has a type property and a payload
+property, the type property describes some
+change that we might want to make inside
+our data. and the payload property describes
+some context around the change that we
+want to make. The purpose of an action is to describe
+some change that we want to make to the data
+inside our application.
+* Dispatch: The dispatch function is going to
+take an action, is going to make copies of
+that object and then pass it off to a bunch
+of different places inside of our application.
+* Reducers: It is a function that is responsable
+for taking in an action and some existing 
+amount of data. It's going to process that
+action and then make some change to the data and
+then return it so that it can then be centralized
+in some other location.
+NOTE: Anytime that we want to change a record or change
+something inside a reducer, we always want to return a
+new array or object, we always avoid to as much as possible
+modifying existing data structures inside of a reducer.
+* State: It is a central repository of all
+information that has been created by our reducers
+All the information gets consolidated inside the state object
+so that our react application can very easily reach in to our
+redux application and get access to all of the data of
+our application.
 
-### `yarn eject`
+<h4>Purpose of using Redux</h4>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* One of the ideas behind redux is to get a much more stable and steady curve of complexity as your app starts to grow even though it initially starts out a lot more complex, as your app starts to grow you are going to get a much more stable and smaller linear growth in complexity.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3>Summary</h3>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* To understand the redux cycle we can start saying that everytime that we
+want to change the state or the data of our application we are going to call an action creator, by doing this this action creator will produce an action object, this action object describes exactly how we want to change data inside of our application, that action object gets fed to the dispatch function which in turn is going to make copies of the action creator object and feed those copies to each of our different reducers. Then the reducers are going to run, they're going to process those actions, modify their data and then eventually return some new data. That data that gets returned goes to a some new state object.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- ![Screenshot Image](public/logoRepo2.PNG) -->
 
-## Learn More
+### Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project was developed using these tools and technologies.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [REACT](https://es.reactjs.org/)
+- [JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [Redux](https://github.com/reduxjs/redux)
+- [React-Redux](https://github.com/reduxjs/react-redux)
+<!-- - [AXIOS](https://github.com/axios/axios) -->
 
-### Code Splitting
+<!-- CONTACT -->
+## Contact
+👤 **Yair Fernando Facio**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Github: [@YairFernando67](https://github.com/YairFernando67)
+- Twitter: [@YairFernando18](https://twitter.com/YairFernando18)
+- Linkedin: [softwaredeveloperyairfacio](https://www.linkedin.com/in/softwaredeveloperyairfacio/)
+- Email: [yair.facio11@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=yair.facio11@gmail.com)
+- Portfolio: [softwaredeveloper](https://yairfernando67.github.io/Portfolio/)
 
-### Analyzing the Bundle Size
+<p align="center">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  Project Link: [https://github.com/YairFernando67/songs](https://github.com/YairFernando67/songs)
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+</p>
