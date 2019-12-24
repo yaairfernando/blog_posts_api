@@ -1,17 +1,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h2 align="center"> React and Redux Application</h2>
+  <h2 align="center"> API request with Redux-thunk</h2>
 
   <p align="center">
-    Project developed with React and Redux that implements a simple
-    example of comunication components using redux and how to include a third library called react-redux to let react and redux to talk to
-    each other.
+    This project is about how we fetch data from an outside
+    API and make use it inside of our application.
+    We are going to use axios to make a request over to a
+    free public service called JSONPlaceholder API.
+    We used redux-thunk to make an API request in our redux application.
     <br />
-    <a href="https://github.com/YairFernando67/songs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/YairFernando67/blog_posts_api"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/YairFernando67/songs/issues">Report Bug</a>
+    <a href="https://github.com/YairFernando67/blog_posts_api/issues">Report Bug</a>
     ·
   </p>
 </p>
@@ -21,6 +23,13 @@
 ## Table of Contents
 
 - [About the Project](#about-the-project)
+  - [Redux-Thunk](Redux-Thunk)
+  - [Middleware](Middleware)
+  - [Rules Of Reducers](Rules-Of-Reducers)
+  - [Redux](#Redux)
+  - [Redux Cycle](#Redux-Cycle)
+  - [Purpose of using Redux](#Purpose-of-using-Redux)
+  - [Summary](Summary)
   - [Built With](#built-with)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
@@ -31,13 +40,34 @@
 
 React application that use react and redux to display a list of songs.
 
-<h4>Redux</h4>
+### Redux-Thunk
+
+* Middleware to help us make requests in a redux application. Anytime that we expect to make an API request form an actual creator we are always going to make use of redux-thunk. 
+* There are other options that allow you to make API requests or otherwise async behaviors but redux-thunk is the most popular.
+
+### Middleware
+
+* Function that gets called with every action we dispatch. 
+* Has the hability to stop, modify or otherwise mess around with actions. 
+* A middleware is for dealing with async actions.
+
+### Rules Of Reducers
+* Must return any value besides 'undefined' otherwise you will get an error
+message. You could either return null but not undefined.
+* Produces 'state' or data to be used inside of our app using only the previous
+state and the action
+* Must not return reach 'out of itself' to decide what value to return (reducers are pure)
+* Must not mutate its input 'state' argument. If you return the same object
+even if you mutate it (modify) redux is not going to make the change to 
+your application. That is why you should not mutate the state.
+
+### Redux
 
 * It is a state managment library, makes creating complex applications easier
 * When using redux it is not required to create a react app.
 * It is not explicity designed to work with react.
 
-<h4>Redux Cycle</h4>
+### Redux Cycle
 
 * Action Creator: It is a function that is
 going to create or return a plain javascript
@@ -72,11 +102,11 @@ so that our react application can very easily reach in to our
 redux application and get access to all of the data of
 our application.
 
-<h4>Purpose of using Redux</h4>
+### Purpose of using Redux
 
 * One of the ideas behind redux is to get a much more stable and steady curve of complexity as your app starts to grow even though it initially starts out a lot more complex, as your app starts to grow you are going to get a much more stable and smaller linear growth in complexity.
 
-<h3>Summary</h3>
+### Summary
 
 * To understand the redux cycle we can start saying that everytime that we
 want to change the state or the data of our application we are going to call an action creator, by doing this this action creator will produce an action object, this action object describes exactly how we want to change data inside of our application, that action object gets fed to the dispatch function which in turn is going to make copies of the action creator object and feed those copies to each of our different reducers. Then the reducers are going to run, they're going to process those actions, modify their data and then eventually return some new data. That data that gets returned goes to a some new state object.
@@ -91,7 +121,9 @@ The project was developed using these tools and technologies.
 - [JSX](https://reactjs.org/docs/introducing-jsx.html)
 - [Redux](https://github.com/reduxjs/redux)
 - [React-Redux](https://github.com/reduxjs/react-redux)
-<!-- - [AXIOS](https://github.com/axios/axios) -->
+- [Redux-thunk](https://github.com/reduxjs/redux-thunk)
+- [AXIOS](https://github.com/axios/axios)
+- [Jsonplaceholder](http://jsonplaceholder.typicode.com/)
 
 <!-- CONTACT -->
 ## Contact
@@ -105,6 +137,6 @@ The project was developed using these tools and technologies.
 
 <p align="center">
 
-  Project Link: [https://github.com/YairFernando67/songs](https://github.com/YairFernando67/songs)
+  Project Link: [https://github.com/YairFernando67/blog_posts_api](https://github.com/YairFernando67/blog_posts_api)
 
 </p>
